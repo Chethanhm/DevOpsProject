@@ -1,7 +1,6 @@
 ---
 - hosts: all
-  #ansadmin doesn't need root access to create an image
-  become: true 
+  #become: true 
 
   tasks:
   - name: building docker image
@@ -10,7 +9,7 @@
       chdir: /opt/docker
 
   - name: add tag to the image
-    command: docker tag calc-image chethanhms/calculatorImage
+    command: docker tag calc-image chethanhms/calculatorimage
 
   - name: push image to dockerhub
     command: docker push chethanhms/calculatorimage

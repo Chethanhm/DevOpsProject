@@ -4,7 +4,7 @@ RUN apk add --update nodejs nodejs-npm
 
 RUN npm install -g http-server
 
-COPY . /src
+COPY ./calc.html /src
 
 WORKDIR /src
 
