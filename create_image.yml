@@ -1,0 +1,20 @@
+--
+- hosts: all
+  #ansadmin doesn't need root access to create an image
+  become: true 
+
+  tasks:
+  - name: building docker image
+    command: "docker build -t calc-image ." 
+    args:
+      chdir: /opt/docker
+
+  - name: add tag to the image
+    command: docker tag calc-image chethanhms/calculatorImage
+
+  - name: push image to dockerhub
+    command: docker push chethanhms/calculatorImage
+
+  - name: Remove image from ansible server
+    command: docker rmi calc-image chethanhms/calculatorImage
+    ignore_errors: yes
