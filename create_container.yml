@@ -12,11 +12,11 @@
     ignore_errors: yes
 
   - name: Remove docker image
-    command: docker rmi chethanhms/calculatorImage
+    command: docker rmi chethanhms/calculatorimage
     ignore_errors: yes
 
   - name: Pull dockerImage from dockerhub
-    command: docker pull chethanhms/calculatorImage
+    command: docker pull chethanhms/calculatorimage
     
   - name: Create container using this image
-    command: docker container run -d --name calculator -p 8080:8080 chethanhms/calculatorImage
+    command: docker container run -d --name calculator -p 8080:8080 chethanhms/calculatorimage

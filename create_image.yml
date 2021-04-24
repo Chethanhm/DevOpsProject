@@ -13,8 +13,8 @@
     command: docker tag calc-image chethanhms/calculatorImage
 
   - name: push image to dockerhub
-    command: docker push chethanhms/calculatorImage
+    command: docker push chethanhms/calculatorimage
 
   - name: Remove image from ansible server
-    command: docker rmi calc-image chethanhms/calculatorImage
+    command: docker rmi calc-image chethanhms/calculatorimage
     ignore_errors: yes
