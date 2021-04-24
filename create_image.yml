@@ -1,4 +1,4 @@
---
+---
 - hosts: all
   #ansadmin doesn't need root access to create an image
   become: true 
