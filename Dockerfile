@@ -1,6 +1,6 @@
 FROM alpine
 
-RUN apk add --update nodejs nodejs-npm
+#RUN apk add --update nodejs nodejs-npm
 
 RUN npm install -g http-server
 
