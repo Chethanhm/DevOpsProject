@@ -1,6 +1,5 @@
 ---
-- hosts: all
-  become: ture
+- hosts: webservers
 
   tasks:
   - name: Stop current running container
